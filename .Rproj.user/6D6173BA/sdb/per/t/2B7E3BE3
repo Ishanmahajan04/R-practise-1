@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output) {\n\n  output$handsontable_obs = renderRHandsontable({\n    rhandsontable(data.frame(Obs_itr = c(1:5),\n                             Val1 = rep(0,5),\n                             Val2 = rep(0,5)))\n  })\n  \n  observeEvent(input$SaveObs,{\n    shinyjs::reset(\"div1\")\n    shinyjs::hide(\"div1\")\n    shinyjs::show(\"SubmitMsg\")\n  })\n  \n  observeEvent(input$addNextObs,{\n    shinyjs::show(\"div1\")\n    shinyjs::hide(\"SubmitMsg\")\n  })\n\n})\n",
+    "created" : 1488759841855.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "529810159",
+    "id" : "2B7E3BE3",
+    "lastKnownWriteTime" : 1488759942,
+    "last_content_update" : 1488759942310,
+    "path" : "~/Desktop/Rpractise/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

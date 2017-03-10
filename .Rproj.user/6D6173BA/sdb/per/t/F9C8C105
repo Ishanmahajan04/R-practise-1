@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nshinyUI(fluidPage(\n\n  useShinyjs(),\n  div(id = 'div1',\n      titlePanel(\"RHOT - Form\"),\n      fluidRow(column(width = 3,selectizeInput(\"Trialid\",\"What Iteration is this?\",choices = c('1','2-3','4-7','8-15'))),\n               column(width = 3,textInput(\"Techie_Name\",\"Your Name\",value='EE')),\n               column(width = 3,textInput(\"lab_id\",\"LAB ID\",value='NA')),\n               column(width = 3,textInput(\"email\",\"Your Email ID\",value='eeshanchatterjee@gmail.com'))\n      ),\n      h4('Observations:'),\n      rHandsontableOutput(\"handsontable_obs\"),\n      actionButton(\"SaveObs\", \"Save Observations\")\n  ),\n  shinyjs::hidden(div(id = 'SubmitMsg',\n                      h3(\"Thanks for submitting the Observations!\"),\n                      actionLink('addNextObs',\"Add Another Observation\"))\n))\n)",
+    "created" : 1488759841574.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2544825103",
+    "id" : "F9C8C105",
+    "lastKnownWriteTime" : 1488760201,
+    "last_content_update" : 1488760201165,
+    "path" : "~/Desktop/Rpractise/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
